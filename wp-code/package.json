@@ -1,0 +1,27 @@
+{
+  "name": "wp-code",
+  "version": "1.0.0",
+  "description": "wp code",
+  "main": "index.js",
+  "bin": {
+    "wp-code": "bin/wp-code.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "wp",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/generator": "^7.4.4",
+    "@babel/traverse": "^7.4.5",
+    "@babel/types": "^7.4.4",
+    "babylon": "^6.18.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
