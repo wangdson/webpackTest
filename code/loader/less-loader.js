@@ -1,7 +1,7 @@
 const less = require('less');
 
 function loader(source){
-  // console.log(`source:${source}`);
+  console.log(`source:${source}`);
   let css = '';
   less.render(source,(err,code)=>{
     if(!err && code) {
@@ -9,7 +9,7 @@ function loader(source){
     }
   });
   css = css.replace(/\n/g,'\\n');
-  // console.log(`css:${css}`);
+  console.log(`css:${css}`);
   return css;
 }
 

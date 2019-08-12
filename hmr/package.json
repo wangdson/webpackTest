@@ -1,0 +1,25 @@
+{
+  "name": "hmr",
+  "version": "1.0.0",
+  "description": "hmr",
+  "main": "./src/main.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "keywords": [
+    "hmr",
+    "webpack"
+  ],
+  "author": "wangpei",
+  "license": "ISC",
+  "devDependencies": {
+    "memory-fs": "^0.4.1",
+    "mime": "^2.4.4",
+    "mine": "^0.1.0",
+    "socket.io": "^2.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

@@ -1,6 +1,7 @@
 let loaderUtils = require('loader-utils')
 
 function loader(source) {
+  // console.log(`----file.loader:${JSON.stringify(source)}-----`);
   // loaderUtils 中的 interpolateName 方法，用于生成对应的文件名
   let filename = loaderUtils.interpolateName(this,'[hash:8].[ext]',{
     content: source

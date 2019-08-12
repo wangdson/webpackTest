@@ -8,6 +8,7 @@ const cssLoader = path.resolve(__dirname,'loader','css-loader.js');
 const lessLoader = path.resolve(__dirname,'loader','less-loader.js');
 const babelLoader = path.resolve(__dirname,'loader','babel-loader.js');
 const fileLoader = path.resolve(__dirname,'loader','file-loader.js');
+const FileEmitPlugin = require('./plugins/FileEmitPlugin');
 
 class CompilePlugin{
   apply(compiler){
@@ -34,6 +35,7 @@ class CompilePlugin{
 
 module.exports = {
   mode: "development",
+  // mode: "production",
   entry: './src/index.js',
   // entry: {
   //   index: "./src/index.js",
@@ -130,13 +132,16 @@ module.exports = {
     ],
   },
   plugins: [
-    // new CompilePlugin(),
-    // new htmlWebpackPlugin({
-    //   template: './index.html',
-    //   filename: 'index.html',
-    //   // chunks: ['test']
+    // new FileEmitPlugin({
+    //   filename: 'fileList.md',
     // }),
-    // new webpack.NamedModulesPlugin(), // 打印变更的模块路径
-    // new webpack.HotModuleReplacementPlugin(), // 热更新插件
+    // new CompilePlugin(),
+    new htmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html',
+      // chunks: ['test']
+    }),
+    new webpack.NamedModulesPlugin(), // 打印变更的模块路径
+    new webpack.HotModuleReplacementPlugin(), // 热更新插件
   ] 
 }

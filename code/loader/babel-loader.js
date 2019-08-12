@@ -21,6 +21,7 @@ function loader(source) {
     sourceMap: true,
     // filename: this.resourcePath && this.resourcePath.split('/').pop(),
   });
+  console.log(`----code:${JSON.stringify(code)}-----`);
   return code;
 }
 
